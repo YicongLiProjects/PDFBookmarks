@@ -1,0 +1,29 @@
+{
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ],
+  "themeSelected": "default",
+  "themeColorsOptions": [
+    {
+      "value": "default",
+      "foreground": "white",
+      "background": "black"
+    },
+    {
+      "value": "future",
+      "foreground": "silver",
+      "background": "blue"
+    },
+    {
+      "value": "desert",
+      "foreground": "green",
+      "background": "gold"
+    }
+  ],
+  "defaultFolder": ""
+}
