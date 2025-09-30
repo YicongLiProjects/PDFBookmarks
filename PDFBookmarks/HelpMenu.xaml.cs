@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,39 @@ namespace PDFBookmarks
         public HelpMenu()
         {
             InitializeComponent();
+            HelpItems.SelectionChanged += SelectHelpItem;
+            BackButton.Click += GoBack;
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        // Select help item and display the corresponding help text
+        private void SelectHelpItem(object sender, SelectionChangedEventArgs e)
         {
+            ListBoxItem selected = (ListBoxItem) HelpItems.SelectedItem;
+            string name = selected.Name;
+            switch (name)
+            {
+                case "BookmarksHelp":
+                    HelpArea.Text = "";
+                    HelpArea.Text = File.ReadAllText("helpMenu/BookmarksHelp.txt");
+                    break;
+                case "OpenFileHelp":
+                    HelpArea.Text = "";
+                    HelpArea.Text = File.ReadAllText("helpMenu/OpenFileHelp.txt");
+                    break;
+                case "SettingsHelp":
+                    HelpArea.Text = "";
+                    HelpArea.Text = File.ReadAllText("helpMenu/SettingsHelp.txt");
+                    break;
+                default:
+                    HelpArea.Text = "";
+                    break;
+            }
+        }
 
+        // Go back to the main menu or file viewer depending on where the user came from
+        public void GoBack(object sender, RoutedEventArgs e)
+        {
+            MainWindow.MainFrame?.GoBack();
         }
     }
 }

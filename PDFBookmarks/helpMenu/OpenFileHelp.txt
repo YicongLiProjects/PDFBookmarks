@@ -1,1 +1,9 @@
-﻿
+﻿How to open PDF files using PDFBookmarks
+
+You can open PDF files in this application by
+dragging and dropping the file into the "All files"
+list, or by clicking on "Open file" in the main menu.
+A dialog box will appear, allowing you to choose the file
+that you want to open. As of right now the app only 
+supports PDF files, but support for other common file types
+may be added in the future. 

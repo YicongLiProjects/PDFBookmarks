@@ -1,1 +1,18 @@
-﻿
+﻿Settings help
+
+- Themes
+	There are many themes available to choose from to customize 
+	the appearance of the application. Three themes are available
+	right now: default, future and desert. The first theme, as
+	the name suggests, is the default theme (black and white).
+	The future theme is a theme with blue and silver as colors,
+	while the desert theme has brown and yellow as colors. More
+	themes will be added in future updates.
+- Default folder
+	The default folder is the folder that the application will
+	open when you click on the "Open File" button. You can
+	change the default folder to any folder on your computer.
+	To change the default folder, click on the "Browse" button
+	and select the desired folder. Once you have selected the
+	folder, click on the "Set as Default" button to set it as
+	the default folder.

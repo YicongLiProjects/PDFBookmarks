@@ -11,17 +11,17 @@
     <Grid Background="White">
         <Label Content="Help page" HorizontalAlignment="Left" Height="54" Margin="597,23,0,0" VerticalAlignment="Top" Width="149" FontSize="30" Background="#00000000"/>
         <ScrollViewer HorizontalAlignment="Left" Height="311" Margin="40,103,0,0" VerticalAlignment="Top" Width="437">
-            <TextBlock TextWrapping="Wrap" Text="Help"/>
+            <TextBlock x:Name="HelpArea" TextWrapping="Wrap" Text="Help"/>
         </ScrollViewer>
-        <Button Content="" HorizontalAlignment="Left" Height="65" Margin="40,20,0,0" VerticalAlignment="Top" Width="65" FontSize="25" Foreground="Black" BorderBrush="{x:Null}">
+        <Button x:Name="BackButton" Content="" HorizontalAlignment="Left" Height="65" Margin="40,20,0,0" VerticalAlignment="Top" Width="65" FontSize="25" Foreground="Black" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/assets/left-arrow.png"/>
+                <ImageBrush ImageSource="/left-arrow.png"/>
             </Button.Background>
         </Button>
-        <ListBox HorizontalAlignment="Left" Height="244" Margin="567,0,0,0" VerticalAlignment="Center" Width="179" SelectionChanged="ListBox_SelectionChanged">
-            <ListBoxItem Content="Bookmarks"/>
-            <ListBoxItem Content="Opening files"/>
-            <ListBoxItem Content="Settings"/>
+        <ListBox x:Name="HelpItems" HorizontalAlignment="Left" Height="244" Margin="567,0,0,0" VerticalAlignment="Center" Width="179">
+            <ListBoxItem x:Name="BookmarksHelp" Content="Bookmarks"/>
+            <ListBoxItem x:Name="OpenFileHelp" Content="Opening files"/>
+            <ListBoxItem x:Name="SettingsHelp" Content="Settings"/>
         </ListBox>
     </Grid>
 </Page>

@@ -26,17 +26,23 @@ namespace PDFBookmarks
             InitializeComponent();
             HelpButton.Click += OpenHelpMenu;
             SettingsButton.Click += OpenSettingsMenu;
+            AllFiles.MouseDoubleClick += OpenFile;
         }
 
-        // Open a PDF file from the list box
-        public void OpenFile(object sender, MouseEventArgs e)
+        // Open a PDF file from the "Open File" button in the main menu
+        public void OpenFile(object sender, RoutedEventArgs e)
         {
-            ListBoxItem? lbi = sender as ListBoxItem;
-            // Navigate to the file viewer if a file is double-clicked
-            if (lbi != null && lbi.IsSelected)
+
+        }
+
+        // Open a PDF file from the list box, overloaded for ListBoxItem
+        public void OpenFile(object sender, MouseButtonEventArgs e)
+        {
+            PDFFile lbi = (PDFFile) AllFiles.SelectedItem;
+            if (lbi != null)
             {
-                Uri newPage = new Uri("FileEditor.xaml", UriKind.Relative);
-                MainWindow.MainFrame?.Navigate(newPage);
+                Uri uri = new Uri("PDFViewer.xaml", UriKind.Relative);
+                MainWindow.MainFrame?.Navigate(uri);
             }
         }
 

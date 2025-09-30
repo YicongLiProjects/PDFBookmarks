@@ -9,7 +9,7 @@
       Title="SettingsMenu">
 
     <Grid Background="White">
-        <Label Content="Settings" HorizontalAlignment="Left" Height="66" Margin="40,80,0,0" VerticalAlignment="Top" Width="156" FontSize="40"/>
+        <Label Content="Settings" HorizontalAlignment="Left" Height="66" Margin="40,85,0,0" VerticalAlignment="Top" Width="156" FontSize="40"/>
         <Label HorizontalAlignment="Left" Height="37" Margin="40,160,0,0" VerticalAlignment="Top" Width="156" FontSize="20">
             <TextBlock TextDecorations="Underline">Themes</TextBlock>
         </Label>
@@ -19,11 +19,11 @@
         <RadioButton Content="Default" HorizontalAlignment="Left" Height="15" Margin="40,210,0,0" VerticalAlignment="Top" Width="64"/>
         <RadioButton Content="Desert" HorizontalAlignment="Left" Height="15" Margin="196,210,0,0" VerticalAlignment="Top" Width="62"/>
         <RadioButton Content="Future" HorizontalAlignment="Left" Height="15" Margin="326,210,0,0" VerticalAlignment="Top" Width="61" Checked="RadioButton_Checked"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="45,329,0,0" TextWrapping="Wrap" Text="Enter folder path" VerticalAlignment="Top" Width="316"/>
+        <TextBox HorizontalAlignment="Left" Height="21" Margin="45,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="316"/>
         <Button Content="Open folder" HorizontalAlignment="Left" Height="21" Margin="387,329,0,0" VerticalAlignment="Top" Width="85"/>
         <Button Content="" HorizontalAlignment="Left" Height="50" Margin="40,20,0,0" VerticalAlignment="Top" Width="50" Click="Button_Click" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/assets/left-arrow.png"/>
+                <ImageBrush ImageSource="/left-arrow.png"/>
             </Button.Background>
         </Button>
     </Grid>
