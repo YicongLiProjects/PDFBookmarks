@@ -15,7 +15,7 @@
         </ScrollViewer>
         <Button x:Name="BackButton" Content="" HorizontalAlignment="Left" Height="65" Margin="40,20,0,0" VerticalAlignment="Top" Width="65" FontSize="25" Foreground="Black" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/left-arrow.png"/>
+                <ImageBrush ImageSource="/assets/left-arrow.png"/>
             </Button.Background>
         </Button>
         <ListBox x:Name="HelpItems" HorizontalAlignment="Left" Height="244" Margin="567,0,0,0" VerticalAlignment="Center" Width="179">

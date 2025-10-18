@@ -11,20 +11,12 @@ namespace PDFBookmarks
     {
         private string _filePath;
         private string _fileName;
-        private int _pageNumber;
 
         public PDFFile(string filePath, string fileName)
         {
             _filePath = filePath;
             _fileName = fileName;
         }
-
-        public int PageNumber
-        {
-            get { return _pageNumber; }
-            set { _pageNumber = value; }
-        }
-
         public string FilePath
         {
             get { return _filePath; }
@@ -35,6 +27,12 @@ namespace PDFBookmarks
         {
             get { return _fileName; }
             set { _fileName = value; }
+        }
+
+        // Override ToString() to display the file name and page number in the list box
+        public override string ToString()
+        {
+            return _fileName;
         }
     }
 }

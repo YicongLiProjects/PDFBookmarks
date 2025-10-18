@@ -54,7 +54,7 @@ namespace PDFBookmarks
         }
 
         // Go back to the main menu or file viewer depending on where the user came from
-        public void GoBack(object sender, RoutedEventArgs e)
+        private void GoBack(object sender, RoutedEventArgs e)
         {
             MainWindow.MainFrame?.GoBack();
         }

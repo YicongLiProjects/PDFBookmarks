@@ -11,11 +11,10 @@ The latest bookmark will be used for that purpose.
 	To remove a bookmark, just select it in the list and click the
 	"remove" button on the left of the scroll viewer where the
 	PDF is rendered.
-3. Editing bookmarks
-	To edit a bookmark, just select it in the list and click the
-	"edit" button on the left of the scroll viewer where the
-	PDF is rendered. You can change its name and page number.
-4. Adding / removing / editing notes
-	You can create, edit and delete notes in the note editor which 
-	can be accessed from the menu bar in the file viewer with the 
-	"Notes" button.
+3. Notes
+	You can edit the text file dedicated to annotations in the notes tab.
+	This will require you to manually save the file by pressing "save"
+	every time you make any modification. 
+
+Note: This feature has been delayed due to time constraints and will be
+released in a later update.

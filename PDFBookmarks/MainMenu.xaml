@@ -10,14 +10,23 @@
 
     <Grid Background="White" OpacityMask="Black">
         <Menu HorizontalAlignment="Center" Height="30" VerticalAlignment="Top" Width="800">
-            <MenuItem FontSize="20" Header="Open file" Margin="46,0,0,0"/>
-            <MenuItem x:Name="SettingsButton" FontSize="20" Header="Settings"/>
+            <MenuItem x:Name="OpenFileButton" FontSize="20" Header="Open file" Margin="46,0,0,0"/>
             <MenuItem x:Name="HelpButton" FontSize="20" Header="Help" Margin="2,0,0,0"/>
         </Menu>
-        <Label Content="All files" HorizontalAlignment="Left" Height="52" Margin="46,49,0,0" VerticalAlignment="Top" Width="104" FontSize="30" RenderTransformOrigin="0.499,0.011"/>
+        <Label Content="All files" HorizontalAlignment="Left" Height="52" Margin="46,49,0,0" VerticalAlignment="Top" Width="104" FontSize="30" RenderTransformOrigin="0.5,0.5"/>
         <!--Only put objects of type PDFFile inside of the ListBox-->
-        <ListBox x:Name="AllFiles" HorizontalAlignment="Left" Height="276" Margin="46,113,0,0" VerticalAlignment="Top" Width="373"/>
-        <Label Content="PDFBookmarks" HorizontalAlignment="Left" Height="40" Margin="604,304,0,0" VerticalAlignment="Top" Width="172" FontSize="24"/>
-        <Label Content="Yicong's projects" HorizontalAlignment="Left" Height="44" Margin="589,357,0,0" VerticalAlignment="Top" Width="187" FontSize="24"/>
+        <ListBox x:Name="AllFiles" HorizontalAlignment="Left" Height="276" Margin="46,113,0,0" VerticalAlignment="Top" Width="373" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="PDFBookmarks" HorizontalAlignment="Left" Height="40" Margin="604,304,0,0" VerticalAlignment="Top" Width="172" FontSize="24" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="Yicong's projects" HorizontalAlignment="Left" Height="44" Margin="589,357,0,0" VerticalAlignment="Top" Width="187" FontSize="24" RenderTransformOrigin="0.5,0.5"/>
+        <Button x:Name="SortButton" HorizontalAlignment="Center" Height="32" Margin="0,70,0,0" VerticalAlignment="Top" Width="32" Foreground="{x:Null}" BorderBrush="{x:Null}" RenderTransformOrigin="6.836,4.448">
+            <Button.Background>
+                <ImageBrush ImageSource="/assets/sort_filter_button.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ClearButton" Content="" HorizontalAlignment="Left" Height="32" Margin="340,70,0,0" VerticalAlignment="Top" Width="32" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/assets/clear_files_list.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

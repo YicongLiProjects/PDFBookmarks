@@ -1,0 +1,23 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PDFBookmarks"
+      xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="PDFBookmarks.FileEditor"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FileViewer" Background="White">
+
+    <Grid>
+        <Menu HorizontalAlignment="Center" Height="30" VerticalAlignment="Top" Width="800">
+            <MenuItem x:Name="HelpButton" FontSize="20" Header="Help" Margin="20,0,0,0"/>
+        </Menu>
+        <Wpf:WebView2 x:Name="Viewer" Height="350" Margin="127,45,23,55"/>
+        <Button x:Name="BackButton" Content="" HorizontalAlignment="Left" Height="65" Margin="35,50,0,0" VerticalAlignment="Top" Width="65" FontSize="25" Foreground="Black" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/assets/left-arrow.png"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>

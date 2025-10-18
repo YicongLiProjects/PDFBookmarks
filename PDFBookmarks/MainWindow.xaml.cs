@@ -28,6 +28,7 @@ namespace PDFBookmarks
             // Initialize the main frame and navigate to the main menu when the app opens
             MainFrame = AppFrame;
             MainFrame?.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
+            this.ResizeMode = ResizeMode.CanMinimize;
         }
 
     }
