@@ -131,7 +131,9 @@
     <Content Include="assets\sort_filter_button.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\PDFFileListBoxData.json" />
+    <Content Include="data\PDFFileListBoxData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

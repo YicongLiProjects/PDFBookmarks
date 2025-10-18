@@ -37,7 +37,11 @@ namespace PDFBookmarks
             // storing all recent files
             if (File.Exists(jsonFilePath) && new FileInfo(jsonFilePath).Length > 0)
             {
-                filesList = JsonSerializer.Deserialize<ObservableCollection<PDFFile>>(File.ReadAllText(jsonFilePath));
+                filesList = JsonSerializer.Deserialize<ObservableCollection<PDFFile>>(File.ReadAllText(jsonFilePath)) ?? new ObservableCollection<PDFFile>();
+            }
+            else if (!File.Exists(jsonFilePath))
+            {
+                File.Create(jsonFilePath).Close();
             }
 
             // Button event handlers
@@ -73,6 +77,7 @@ namespace PDFBookmarks
                     MessageBox.Show("Please select a PDF file");
                     return;
                 }
+
                 PDFFile file = new PDFFile(filePath, fileName);
 
                 // Add file to the main menu's list box
@@ -81,7 +86,7 @@ namespace PDFBookmarks
 
                 // Update Json file
                 string newJsonString = JsonSerializer.Serialize(filesList);
-                File.WriteAllText("PDFFileListBoxData.json", newJsonString);
+                File.WriteAllText(jsonFilePath, newJsonString);
 
                 MainWindow.MainFrame?.Navigate(new FileEditor(filePath));
             }
@@ -95,6 +100,15 @@ namespace PDFBookmarks
             {
                 string filePath = lbi.FilePath;
                 MainWindow.MainFrame?.Navigate(new FileEditor(filePath));
+            }
+            else if (lbi != null && !File.Exists(lbi.FilePath))
+            {
+                MessageBox.Show("The selected file does not exist");
+                filesList.Remove(lbi);
+
+                // Update Json file
+                string newJsonString = JsonSerializer.Serialize(filesList);
+                File.WriteAllText(jsonFilePath, newJsonString);
             }
         }
 
@@ -111,7 +125,7 @@ namespace PDFBookmarks
 
             // Update the Json file
             string updatedFileList = JsonSerializer.Serialize<ObservableCollection<PDFFile>>(filesList);
-            File.WriteAllText("PDFFileListBoxData.json", updatedFileList);
+            File.WriteAllText(jsonFilePath, updatedFileList);
         }
 
         private void OpenSettingsMenu(object sender, RoutedEventArgs e)
@@ -127,7 +141,7 @@ namespace PDFBookmarks
         private void ClearListBox(object sender, RoutedEventArgs e)
         {
             filesList.Clear();
-            File.WriteAllText("PDFFileListBoxData.json", "");
+            File.WriteAllText(jsonFilePath, "");
         }
 
         // Event handler for the sorting button
@@ -135,6 +149,10 @@ namespace PDFBookmarks
         private void SortFiles(object sender, RoutedEventArgs e)
         {
             SortFiles(filesList, 0, filesList.Count - 1);
+
+            // Update Json file
+            string updatedFileList = JsonSerializer.Serialize<ObservableCollection<PDFFile>>(filesList);
+            File.WriteAllText(jsonFilePath, updatedFileList);
         }
 
 
