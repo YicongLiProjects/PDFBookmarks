@@ -29,7 +29,6 @@ namespace PDFBookmarks
             MainFrame = AppFrame;
             MainFrame?.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
             this.ResizeMode = ResizeMode.CanMinimize;
-            this.Title = "PDFBookmarks";
         }
 
     }
